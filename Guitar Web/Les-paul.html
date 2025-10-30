@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gibson Les Paul</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{ font-family:'Segoe UI','Apple SD Gothic Neo',Arial,sans-serif; background:#f5f7fa; margin:0; color:#222a35; }
+    header{ background:#222a35; color:#fff; padding:24px 0 16px 0; text-align:center; }
+    header h1{ margin:0; font-size:2.2rem; }
+    header button{ margin-top:12px; background:#fff; color:#222a35; border:none; border-radius:20px; padding:8px 20px; cursor:pointer; }
+    .detail-layout{ display:flex; flex-wrap:wrap; justify-content:center; gap:40px; padding:40px 20px 20px 20px; max-width:900px; margin:0 auto; }
+    .detail-img img{ width:320px; height:auto; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.12); border:2px solid #e0e7ef; background:#fff; }
+    .detail-info{ background:#fff; border-radius:18px; padding:32px 28px; min-width:260px; max-width:340px; }
+    footer{ display:flex; justify-content:center; gap:18px; padding:28px 0 32px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gibson Les Paul</h1>
+    <button onclick="window.location.href='index.html'">뒤로가기</button>
+  </header>
+  <main class="detail-layout">
+    <div class="detail-img">
+  <img src="images/Les-paul.jpeg" alt="Gibson Les Paul">
+    </div>
+    <div class="detail-info">
+      <h2>Gibson</h2>
+      <p>록의 상징, 강렬한 사운드와 풍부한 서스테인.</p>
+      <ul>
+        <li>재질: 메이플 탑, 마호가니 바디</li>
+        <li>사운드: 두껍고 힘있는 톤</li>
+        <li>특징: 하드록/블루스/메탈에 적합</li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <button id="like-btn">❤️ 좋아요</button>
+    <button onclick="window.location.href='index.html'">다른 모델 보기</button>
+  </footer>
+  <script>document.getElementById('like-btn').addEventListener('click', function(){ this.classList.toggle('liked'); });</script>
+</body>
+</html>

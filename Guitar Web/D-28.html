@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martin D-28</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Apple SD Gothic Neo', Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      color: #222a35;
+    }
+    header {
+      background: #222a35;
+      color: #fff;
+      padding: 24px 0 16px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+    }
+    header button {
+      margin-top: 12px;
+      background: #fff;
+      color: #222a35;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      transition: background 0.2s, color 0.2s;
+    }
+    header button:hover {
+      background: #314060;
+      color: #fff;
+    }
+    .detail-layout {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px 20px 20px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .detail-img img {
+      width: 320px;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      border: 2px solid #e0e7ef;
+      background: #fff;
+    }
+    .detail-info {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 32px 28px;
+      min-width: 260px;
+      max-width: 340px;
+      color: #222a35;
+    }
+    .detail-info h2 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #222a35;
+      margin-bottom: 12px;
+    }
+    .detail-info p {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      color: #314060;
+    }
+    .detail-info ul {
+      padding-left: 18px;
+      margin: 0;
+      color: #314060;
+      font-size: 1rem;
+    }
+    .detail-info li {
+      margin-bottom: 8px;
+    }
+    footer {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      padding: 28px 0 32px 0;
+      background: transparent;
+    }
+    #like-btn {
+      background: #fff;
+      color: #d7263d;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 1px 6px rgba(215,38,61,0.08);
+      transition: background 0.2s, color 0.2s;
+    }
+    #like-btn.liked {
+      background: #d7263d;
+      color: #fff;
+    }
+    footer button {
+      background: #222a35;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 28px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      transition: background 0.2s, color 0.2s;
+    }
+    footer button:hover {
+      background: #314060;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .detail-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 8px 8px 8px;
+      }
+      .detail-info {
+        padding: 20px 12px;
+        min-width: unset;
+        max-width: 98vw;
+      }
+      .detail-img img {
+        width: 98vw;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Martin D-28</h1>
+    <button onclick="window.location.href='index.html'">뒤로가기</button>
+  </header>
+  <main class="detail-layout">
+    <div class="detail-img">
+  <img src="images/common.jpeg" alt="Martin D-28">
+    </div>
+    <div class="detail-info">
+      <h2>Martin</h2>
+      <p>전설적인 D-28 모델은 깊은 울림과 선명한 사운드로 유명합니다.</p>
+      <ul>
+        <li>재질: 스프루스 탑, 로즈우드 백&사이드</li>
+        <li>사운드: 풍부하고 따뜻함</li>
+        <li>특징: 포크/컨트리/록에 적합</li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <button id="like-btn">❤️ 좋아요</button>
+    <button onclick="window.location.href='index.html'">다른 모델 보기</button>
+  </footer>
+  <script>
+    document.getElementById('like-btn').addEventListener('click', function() {
+      this.classList.toggle('liked');
+    });
+  </script>
+</body>
+</html>

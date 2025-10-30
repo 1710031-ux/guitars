@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gibson J-45</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 공통 스타일 유지: 헤더는 style.css의 header.detail을 사용합니다 */
+    body { font-family: 'Inter', 'Segoe UI', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f6fa; margin: 0; color: #222; min-height: 100vh; }
+    .detail-layout{ display:flex; gap:40px; padding:48px 20px; max-width:900px; margin:0 auto; }
+    .detail-img{ background:#fff; padding:32px; border-radius:24px; }
+    .detail-info{ background:#fff; padding:40px; border-radius:24px; }
+  </style>
+</head>
+<body>
+  <header class="detail">
+    <h1>Gibson J-45</h1>
+    <button onclick="window.location.href='index.html'">뒤로가기</button>
+  </header>
+  <main class="detail-layout">
+    <div class="detail-img">
+  <img src="images/J-45.jpeg" alt="Gibson J-45">
+    </div>
+    <div class="detail-info">
+      <h2>Gibson</h2>
+      <p>따뜻한 톤과 부드러운 연주감으로 사랑받는 J-45.</p>
+      <ul>
+        <li>재질: 스프루스 탑 / 다양한 바디 옵션</li>
+        <li>사운드: 따뜻하고 풍부한 미드레인지</li>
+        <li>특징: 어쿠스틱 연주에 최적</li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <button id="like-btn">❤️ 좋아요</button>
+    <button onclick="window.location.href='index.html'">다른 모델 보기</button>
+  </footer>
+  <script>document.getElementById('like-btn').addEventListener('click', function(){ this.classList.toggle('liked'); });</script>
+</body>
+</html>

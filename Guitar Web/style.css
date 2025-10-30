@@ -1,0 +1,222 @@
+body {
+  font-family: 'Noto Sans', 'Pretendard', sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+}
+header {
+  padding: 24px 16px 8px 16px;
+  background: #f8f3ee;
+  border-bottom: 1px solid #e0d6c3;
+}
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+}
+nav {
+  margin-bottom: 8px;
+}
+.brand-btn {
+  background: #c2a77d;
+  color: #fff;
+  border: none;
+  margin-right: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.brand-btn.active {
+  background: #8d6e4a;
+}
+#search {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e0d6c3;
+  width: 200px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 32px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e0d6c3;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+.card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.card-model {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 12px 0 8px 0;
+}
+.card-btn {
+  background: #c2a77d;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.detail-layout {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+}
+.detail-img img {
+  width: 320px;
+  border-radius: 16px;
+}
+.detail-info {
+  flex: 1;
+  background: #f8f3ee;
+  border-radius: 16px;
+  padding: 24px;
+}
+footer {
+  padding: 24px;
+  text-align: center;
+}
+#like-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c2a77d;
+  transition: color 0.2s;
+}
+#like-btn.liked {
+  color: #e74c3c;
+}
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(51, 51, 51, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal.hidden {
+  display: none;
+}
+.modal-content {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  text-align: center;
+  min-width: 320px;
+  max-width: 400px;
+}
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-img img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    min-width: 220px;
+    padding: 16px;
+  }
+}
+
+/* Common footer/detail page button styles (used by detail and _main pages) */
+footer button {
+  background: #e9ecf2;
+  color: #23395d;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 32px;
+  font-size: 1.13rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+}
+footer button:hover {
+  background: #dbe3ee;
+  color: #1a2940;
+}
+
+#like-btn {
+  background: #e9ecf2;
+  color: #d7263d;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 32px;
+  font-size: 1.13rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 6px rgba(215,38,61,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+#like-btn.liked {
+  background: #d7263d;
+  color: #fff;
+}
+
+/* Detail pages header (used by *_main.html files) */
+header.detail {
+  background: #23395d;
+  color: #fff;
+  padding: 32px 0 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+header.detail h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+header.detail button {
+  margin-top: 18px;
+  background: #e9ecf2;
+  color: #23395d;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 28px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}

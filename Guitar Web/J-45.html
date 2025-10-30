@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gibson J-45</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* D-28 페이지 스타일을 기반으로 간단히 맞춤 */
+    body { font-family: 'Segoe UI', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f5f7fa; margin:0; color:#222a35; }
+    header { background:#222a35; color:#fff; padding:24px 0 16px 0; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.04);} 
+    header h1{ margin:0; font-size:2.2rem; letter-spacing:2px; }
+    header button{ margin-top:12px; background:#fff; color:#222a35; border:none; border-radius:20px; padding:8px 20px; cursor:pointer; }
+    .detail-layout{ display:flex; flex-wrap:wrap; justify-content:center; gap:40px; padding:40px 20px 20px 20px; max-width:900px; margin:0 auto; }
+    .detail-img img{ width:320px; height:auto; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.12); border:2px solid #e0e7ef; background:#fff; }
+    .detail-info{ background:#fff; border-radius:18px; box-shadow:0 2px 12px rgba(0,0,0,0.07); padding:32px 28px; min-width:260px; max-width:340px; }
+    footer{ display:flex; justify-content:center; gap:18px; padding:28px 0 32px 0; }
+    @media (max-width:700px){ .detail-layout{ flex-direction:column; align-items:center; } .detail-img img{ width:98vw; max-width:340px;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gibson J-45</h1>
+    <button onclick="window.location.href='index.html'">뒤로가기</button>
+  </header>
+  <main class="detail-layout">
+    <div class="detail-img">
+  <img src="images/J-45.jpeg" alt="Gibson J-45">
+    </div>
+    <div class="detail-info">
+      <h2>Gibson</h2>
+      <p>따뜻한 톤과 부드러운 연주감으로 사랑받는 J-45.</p>
+      <ul>
+        <li>재질: 스프루스 탑, 메이플/마호가니 바디(모델에 따라 상이)</li>
+        <li>사운드: 따뜻하고 풍부한 미드레인지</li>
+        <li>특징: 포크, 블루스, 어쿠스틱 연주에 적합</li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <button id="like-btn">❤️ 좋아요</button>
+    <button onclick="window.location.href='index.html'">다른 모델 보기</button>
+  </footer>
+  <script>document.getElementById('like-btn').addEventListener('click', function(){ this.classList.toggle('liked'); });</script>
+</body>
+</html>
